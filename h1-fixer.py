@@ -5,6 +5,22 @@ import os
 import re
 from pathlib import Path
 
+# H1 Fixer - usage - two functions
+#
+# Find Missing H1s:
+# - you don't need to do this if you are already working on a sheet from a previous run of this script.
+# - replace local-path with the path to your local docs repo - relative or absolute path is fine
+#
+# python3 h1-fixer.py find --local-path /home/brucehamilton/github/flatcar-refactor/content/docs/latest --output-csv missing_h1_headings.csv
+#
+# Add/Update H1:
+# - replace local-path with the path to your local docs repo - relative or absolute
+# - assumes the input CSV has the following columns: path, meta-title, new-h1 - and has the desired meta title and H1 for each file.
+# - you can break the job 
+#
+# python3 h1-fixer.py add --local-path /home/brucehamilton/github/flatcar-refactor/content/docs/latest --input-csv add-h1-headings.csv
+#
+
 
 DEFAULT_LOCAL_PATH = "/home/brucehamilton/github/flatcar-refactor/content/docs/latest"
 DEFAULT_INPUT_CSV = "add-h1-headings.csv"
