@@ -151,6 +151,7 @@ def find_missing_h1_headings(local_path=DEFAULT_LOCAL_PATH, output_csv=DEFAULT_O
                                 "path": str(Path(filepath).resolve().relative_to(Path(local_path).resolve())),
                                 "filename": filename,
                                 "meta-title": title,
+                                "new-h1": "",
                             }
                         )
                         missing_h1_files += 1
@@ -158,7 +159,7 @@ def find_missing_h1_headings(local_path=DEFAULT_LOCAL_PATH, output_csv=DEFAULT_O
                 print(f"Error reading file {filepath}: {e}")
 
     print(f"Total files missing H1 headings: {missing_h1_files}")
-    fieldnames = ["path", "filename", "meta-title"]
+    fieldnames = ["path", "filename", "meta-title", "new-h1"]
 
     with open(output_csv, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
