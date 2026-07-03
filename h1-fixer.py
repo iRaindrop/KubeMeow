@@ -5,22 +5,6 @@ import os
 import re
 from pathlib import Path
 
-# H1 Fixer - usage - two functions
-#
-# Find Missing H1s:
-# - you don't need to do this if you are already working on a sheet from a previous run of this script.
-# - replace local-path with the path to your local docs repo - relative or absolute path is fine
-#
-# python3 h1-fixer.py find --local-path /home/brucehamilton/github/flatcar-refactor/content/docs/latest --output-csv missing_h1_headings.csv
-#
-# Add/Update H1:
-# - replace local-path with the path to your local docs repo - relative or absolute
-# - assumes the input CSV has the following columns: path, meta-title, new-h1 - and has the desired meta title and H1 for each file.
-# - you can break the job 
-#
-# python3 h1-fixer.py add --local-path /home/brucehamilton/github/flatcar-refactor/content/docs/latest --input-csv add-h1-headings.csv
-#
-
 
 DEFAULT_LOCAL_PATH = "/home/brucehamilton/github/flatcar-refactor/content/docs/latest"
 DEFAULT_INPUT_CSV = "add-h1-headings.csv"
@@ -90,16 +74,22 @@ def add_missing_h1_headings(local_path=DEFAULT_LOCAL_PATH, input_csv=DEFAULT_INP
                 body_start = closing_idx + 1
                 body_lines = lines[body_start:]
 
-                first_nonblank_idx = None
-                for i, line in enumerate(body_lines):
-                    if line.strip():
-                        first_nonblank_idx = i
-                        break
+                # Check the full body (outside fenced code blocks) for any existing H1.
+                has_existing_h1 = False
+                in_code_fence = False
+                for line in body_lines:
+                    stripped = line.strip()
 
-                has_existing_h1 = (
-                    first_nonblank_idx is not None
-                    and re.match(r"^#\s+\S", body_lines[first_nonblank_idx].strip()) is not None
-                )
+                    if stripped.startswith("```") or stripped.startswith("~~~"):
+                        in_code_fence = not in_code_fence
+                        continue
+
+                    if in_code_fence:
+                        continue
+
+                    if re.match(r"^#\s+\S", stripped):
+                        has_existing_h1 = True
+                        break
 
                 if not has_existing_h1:
                     while body_lines and body_lines[0].strip() == "":
