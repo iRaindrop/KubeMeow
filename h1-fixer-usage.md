@@ -1,5 +1,7 @@
 # H1 Fixer
 
+**UPDATE:** This fix is moot as the practice of not using H1s is an established practice.
+
 There are currently ~132 Flatcar topics that are missing their H1 headings, e.g. "# Flatcar Container Linux". The reason these files still build is because the title in the metadata, on line 2 after the opening "---" delimiter, is picked up by the build if there's no H1.
 
 The H1, such as `# Flatcar Container Linux`, should be between the closing delimiter of the metadata and the first line of text, but surrounded by blank lines, like this:
