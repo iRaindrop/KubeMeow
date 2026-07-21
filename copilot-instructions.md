@@ -17,7 +17,7 @@ Review sources:
 - Analysis criteria for evaluating content: https://github.com/cncf/techdocs/blob/main/docs/analysis/criteria.md.
 - Template for the analysis report: https://github.com/cncf/techdocs/blob/main/docs/analysis/templates/analysis.md
 
-Analysis criteria is further specified in the pre-defined prompts below.
+Analysis criteria is further specified in the prompt files under `.github/prompts/`.
 
 ## Analysis responses style
 
@@ -28,174 +28,15 @@ Responses should be concise, actionable, and focused on improving the documentat
 
 ## Pre-defined Prompts
 
-### Pre‑defined Prompt: "information-architecture-answers"
+The analysis prompts live under `.github/prompts/` and are organized into three layers so the per-area questions (data) are separated from the task logic (verbs):
 
-If provided a title parameter, output shall be in a Markdown file in the current directory.
+- Per-area wrappers (`<area>-<type>.prompt.md`) — the entry points you invoke, for example `/information-architecture-answers`. Each wrapper simply binds one criteria area to one shared engine.
+- Shared engines (`answers.prompt.md`, `comment.prompt.md`, `recommendations.prompt.md`) — the reusable procedure for each output type. They are project-agnostic: the project name and documentation label are read from the "Current Repository" section below, so the same engines work in any repository.
+- Criteria definitions (`criteria/<area>.md`) — the per-area data: display name, output-file stem, question set, and comment guidance.
 
-Context:  The sources described in the Current Repository section.
+Areas: `information-architecture`, `new-user-content`, `content-maintainability`, `content-creation-process`, `inclusive-language`. Output types: `answers`, `comment`, `recommendations`.
 
-Task: Provide concise answers to the following questions about the information architecture of the documentation. Output the answers as indented paragraphs under each question. If the answer is "yes" or "no", provide a brief explanation. Do not bold the answers.
-
-- Is there high level conceptual/“About” content? Is the documentation feature
-  complete? (i.e., each product feature is documented)
-- Are there step-by-step instructions (tasks, tutorials) documented for
-  features?
-- Are there any key features which are documented but missing task
-  documentation?
-- Is the “happy path”/most common use case documented? Does task and tutorial
-  content demonstrate atomicity and isolation of concerns? (Are tasks clearly
-  named according to user goals?)
-- If the documentation does not suffice, is there a clear escalation path for
-  users needing more help? (FAQ, Troubleshooting)
-- If the product exposes an API, is there a complete reference?
-- Is content up to date and accurate?
-
-### Pre‑defined Prompt: "information-architecture-comment"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context: The sources described in the Current Repository section.
-
-Task: Create a two to four paragraph comment on the information architecture of the documentation. The comment should be concise, actionable, and focused on improving the documentation. Include a True/False evaluation whether or not a restructure of the content is needed.
-
-Good example of Information Architecture: https://prometheus.io/docs
-
-### Pre-defined Prompt: "information-architecture-recommendations"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Provide concise recommendations for improving the information architecture of the documentation based on answers provided in `kubevirt-infoarch-answers.md` and comments provided in `kubevirt-infoarch-comment.md` Output the recommendations in a bulleted list. Use this intro: "The following recommendations address the information architecture of the KubeVirt user guide."
-
-### Pre‑defined Prompt: "new-user-content-answers"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Provide concise answers to the following questions about the new user content of the documentation. Output the answers as indented paragraphs under each question. If the answer is "yes" or "no", provide a brief explanation. Do not bold the answers.
-
-- Is “getting started” clearly labeled? (“Getting started”, “Installation”,
-  “First steps”, etc.)
-- Is installation documented step-by-step?
-- If needed, are multiple OSes documented?
-- Do users know where to go after reading the getting started guide?
-- Is your new user content clearly signposted on your site’s homepage or at the
-  top of your information architecture?
-- Is there sample code or other example content that can easily be copy-pasted?
-
-### Pre‑defined Prompt: "new-user-content-comment"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Create a two to four paragraph comment on the new user content of the documentation. The comment should be concise, actionable, and focused on improving the documentation.
-
-Good example of new user content: https://falco.org/docs/getting-started/
-
-### Pre-defined Prompt: "new-user-content-recommendations"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Provide concise recommendations for improving the new user content of the documentation based on answers provided in `kubevirt-new-user-answers.md` and comments provided in `kubevirt-new-user-comment.md`. Output the recommendations in a bulleted list. Use this intro: "The following recommendations address the new user content of the KubeVirt user guide."
-
-### Pre‑defined Prompt: "content-maintainability-answers"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Provide concise answers to the following questions about the content maintainability of the documentation. Output the answers as indented paragraphs under each question. If the answer is "yes" or "no", provide a brief explanation. Do not bold the answers.
-
-- Is the documentation searchable?
-- Are there plans for localization/internationalization with regards to site
-  directory structure? Is a localization framework present?
-- Is there a clearly documented method for versioning of content?
-
-### Pre‑defined Prompt: "content-maintainability-comment"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Create a two to four paragraph comment on the content maintainability content of the documentation. The comment should be concise, actionable, and focused on improving the documentation.
-
-Good example of content maintainability: - https://kubernetes.io/docs/
-
-### Pre-defined Prompt: "content-maintainability-recommendations"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Provide concise recommendations for improving the content maintainability of the documentation based on answers provided in `kubevirt-content-maintainability-answers.md` and comments provided in `kubevirt-content-maintainability-comment.md`. Output the recommendations in a bulleted list. Use this intro: "The following recommendations address the content maintainability of the KubeVirt user guide."
-
-### Pre‑defined Prompt: "content-creation-process-answers"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Provide concise answers to the following questions about the content creation process of the documentation. Output the answers as indented paragraphs under each question. If the answer is "yes" or "no", provide a brief explanation. Do not bold the answers.
-
-- Is there a clearly documented (ongoing) contribution process for
-  documentation?
-- Does the code release process account for documentation creation & updates?
-- Who reviews and approves documentation pull requests?
-- Does the website have a clear owner/maintainer?
-
-### Pre‑defined Prompt: "content-creation-process-comment"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Create a two to four paragraph comment on the content creation process of the documentation. The comment should be concise, actionable, and focused on improving the documentation.
-
-Good examples of content creation process:
-- https://github.com/nats-io/nats-site/blob/master/MAINTAINERS.md
-- https://thanos.io/tip/contributing/how-to-contribute-to-docs.md
-
-### Pre‑defined Prompt: "content-creation-process-recommendations"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Provide concise recommendations for improving the content creation process of the documentation based on answers provided in `kubevirt-content-creation-process-answers.md` and comments provided in `kubevirt-content-creation-process-comment.md`. Output the recommendations in a bulleted list. Use this intro: "The following recommendations address the content creation process of the KubeVirt user guide."
-
-### Pre‑defined Prompt: "inclusive-language-answers"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Provide concise answers to the following questions about inclusive language in the documentation. Output the answers as indented paragraphs under each question. If the answer is "yes" or "no", provide a brief explanation. Do not bold the answers.
-
-- Are there any customer-facing utilities, endpoints, class names, or feature
-  names that use non-recommended words as documented by the
-  [Inclusive Naming Initiative](https://inclusivenaming.org) website?
-- Does the project use language like "simple", "easy", etc.?
-
-### Pre‑defined Prompt: "inclusive-language-comment"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Create a two to four paragraph comment on any inclusive language concerns in the documentation. The comment should be concise, actionable, and focused on improving the documentation.
-
-### Pre‑defined Prompt: "inclusive-language-recommendations"
-
-If provided a title parameter, output shall be in a Markdown file in the current directory.
-
-Context:  The sources described in the Current Repository section.
-
-Task: Provide concise recommendations for improving the inclusive language in the documentation based on answers provided in `kubevirt-inclusive-language-answers.md` and comments provided in `kubevirt-inclusive-language-comment.md`. Output the recommendations in a bulleted list. Use this intro: "The following recommendations address the inclusive language of the KubeVirt user guide."
+By default a prompt writes to `<project-slug>-<stem>-<type>.md` in the current directory (for example, `kubevirt-infoarch-answers.md`). Provide an optional `title` input to override the filename. To add or change questions for an area, edit only its `criteria/<area>.md` file.
 
 ## Current Repository
 
@@ -234,15 +75,8 @@ Every subdirectory under `docs/` has a `.nav.yml` that explicitly controls page 
 #### Redirects in `mkdocs.yml`
 Old page paths (e.g. `operations/`, `virtual_machines/`) are redirected to their new locations via the `redirects` plugin in `mkdocs.yml`. When moving or renaming a page, add an entry there.
 
-#### Commit signing required
-All commits must be signed off:
-```bash
-git commit -s -m "Your message"
-```
-To sign all commits back to `main`:
-```bash
-git rebase --exec 'git commit --amend --no-edit -n -s' -i main
-```
+#### No commits
+This work is solely for documentation analysis. There are no commits to the application code in this repository.
 
 #### Spelling dictionary
 The yaspeller dictionary is sourced from `kubevirt/project-infra/images/yaspeller/.yaspeller.json`. If a technical term causes false positives, it needs to be added there (upstream), not locally — unless a local `yaspeller.json` override is present.
