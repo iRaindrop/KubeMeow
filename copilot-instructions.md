@@ -25,6 +25,9 @@ Responses should be concise, actionable, and focused on improving the documentat
 
 - Write complete sentences whenever possible. Avoid fragments.
 - Fragments are ok if in a bullet list with an introductory sentence.
+- Avoid not widely-known terms or acronyms, or provide a brief explanation of them.
+- Nuances are not as important as actionable recommendations.
+- If a pre-defined prompt says to write up to four paragraphs, there's no need to write more than necessary to meet the maximum.
 
 ## Pre-defined Prompts
 
@@ -37,6 +40,24 @@ The analysis prompts live under `.github/prompts/` and are organized into three 
 Areas: `information-architecture`, `new-user-content`, `content-maintainability`, `content-creation-process`, `inclusive-language`. Output types: `answers`, `comment`, `recommendations`.
 
 By default a prompt writes to `<project-slug>-<stem>-<type>.md` in the current directory (for example, `kubevirt-infoarch-answers.md`). Provide an optional `title` input to override the filename. To add or change questions for an area, edit only its `criteria/<area>.md` file.
+
+### Example: invoking a pre-defined prompt
+
+To have Copilot answer the information architecture questions, invoke the per-area wrapper as a slash command in the current directory:
+
+```text
+run /information-architecture-answers
+```
+
+This runs the `information-architecture` questions through the shared `answers` engine and writes the result to the default file `kubevirt-infoarch-answers.md`.
+
+To override the output filename, pass a `title` input:
+
+```text
+run /information-architecture-answers title: my-analysis
+```
+
+That writes the answers to `my-analysis.md` instead of the default filename. The same pattern applies to every area and output type — for example, `/inclusive-language-recommendations` or `/new-user-content-comment`.
 
 ## Current Repository
 
