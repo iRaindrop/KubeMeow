@@ -41,9 +41,28 @@ There is also an optional composite engine, `full.prompt.md`, that runs the `ans
 
 Each criteria area needs three wrapper files (`answers`, `comment`, `recommendations`), and the wrappers are mechanical: they reference the area name and embed the display name in the description. A `full` wrapper is optional per area.
 
-Areas: `information-architecture`, `new-user-content`, `content-maintainability`, `content-creation-process`, `inclusive-language`. Output types: `answers`, `comment`, `recommendations` (plus the optional `full` composite).
-
 By default a prompt writes to `<project-slug>-<stem>-<type>.md` in the current directory (for example, `kubevirt-infoarch-answers.md`). Provide an optional `title` input to override the filename. To add or change questions for an area, edit only its `criteria/<area>.md` file.
+
+Output types: `answers`, `comment`, `recommendations` (plus the optional `full` composite).
+
+Areas:
+
+| Area | Display Name | Output File Stem | Section in analysis.md |
+|------|--------------|-----------------|------------------------|
+| beginner-friendly-issue-backlog | Beginner Friendly Issue Backlog | beginner-issue-backlog | Project Documentation |
+| branding-design | Branding and Design | branding-design | Website and Infrastructure |
+| case-studies | Case Studies | case-studies | Website and Infrastructure |
+| communication-methods-documented | Communication Methods Documented | communication-methods-docd | Project Documentation |
+| content-creation-process | Content Creation Process | content-creation-process | Project Documentation |
+| content-maintainability | Content Maintainability | content-maintainability | Project Documentation |
+| inclusive-language | Inclusive Language | inclusive-language | Project Documentation |
+| information-architecture | Information Architecture | infoarch | Project Documentation |
+| maintenance-planning | Maintenance Planning | maintenance-planning | Website and Infrastructure |
+| new-contributor-content | New Contributor Content | new-contributor | Contributor Documentation |
+| new-user-content | New User Content | new-user | Project Documentation |
+| project-governance | Project Governance Documentation | project-governance | Contributor Documentation |
+| seo-analytics-site-search | SEO, Analytics, and Site Search | seo-analytics-search | Website and Infrastructure |
+| usability-accessibility-devices | Usability, Accessibility and Devices | usability-accessibility-devices | Website and Infrastructure |
 
 ### Example: invoking a pre-defined prompt
 
