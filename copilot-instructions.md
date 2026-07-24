@@ -37,7 +37,11 @@ The analysis prompts live under `.github/prompts/` and are organized into three 
 - Shared engines (`answers.prompt.md`, `comment.prompt.md`, `recommendations.prompt.md`) — the reusable procedure for each output type. They are project-agnostic: the project name and documentation label are read from the "Current Repository" section below, so the same engines work in any repository.
 - Criteria definitions (`criteria/<area>.md`) — the per-area data: display name, output-file stem, question set, and comment guidance.
 
-Areas: `information-architecture`, `new-user-content`, `content-maintainability`, `content-creation-process`, `inclusive-language`. Output types: `answers`, `comment`, `recommendations`.
+There is also an optional composite engine, `full.prompt.md`, that runs the `answers`, `comment`, and `recommendations` engines for one area in that order (recommendations depends on the answers and comment files existing first). A per-area `full` wrapper (for example, `/information-architecture-full`) invokes it to produce all three output files in a single run.
+
+Each criteria area needs three wrapper files (`answers`, `comment`, `recommendations`), and the wrappers are mechanical: they reference the area name and embed the display name in the description. A `full` wrapper is optional per area.
+
+Areas: `information-architecture`, `new-user-content`, `content-maintainability`, `content-creation-process`, `inclusive-language`. Output types: `answers`, `comment`, `recommendations` (plus the optional `full` composite).
 
 By default a prompt writes to `<project-slug>-<stem>-<type>.md` in the current directory (for example, `kubevirt-infoarch-answers.md`). Provide an optional `title` input to override the filename. To add or change questions for an area, edit only its `criteria/<area>.md` file.
 
