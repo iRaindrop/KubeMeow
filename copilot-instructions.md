@@ -49,16 +49,16 @@ Areas:
 
 | Area | Display Name | Output File Stem | Section in analysis.md |
 |------|--------------|-----------------|------------------------|
-| beginner-friendly-issue-backlog | Beginner Friendly Issue Backlog | beginner-issue-backlog | Project Documentation |
+| beginner-friendly-issue-backlog | Beginner Friendly Issue Backlog | beginner-issue-backlog | Contributor Documentation |
 | branding-design | Branding and Design | branding-design | Website and Infrastructure |
 | case-studies | Case Studies | case-studies | Website and Infrastructure |
-| communication-methods-documented | Communication Methods Documented | communication-methods-docd | Project Documentation |
+| communication-methods-documented | Communication Methods Documented | communication-methods-docd | Contributor Documentation |
 | content-creation-process | Content Creation Process | content-creation-process | Project Documentation |
 | content-maintainability | Content Maintainability | content-maintainability | Project Documentation |
 | inclusive-language | Inclusive Language | inclusive-language | Project Documentation |
 | information-architecture | Information Architecture | infoarch | Project Documentation |
 | maintenance-planning | Maintenance Planning | maintenance-planning | Website and Infrastructure |
-| new-contributor-content | New Contributor Content | new-contributor | Contributor Documentation |
+| new-contributor-content | New Contributor Getting Started Content | new-contributor | Contributor Documentation |
 | new-user-content | New User Content | new-user | Project Documentation |
 | project-governance | Project Governance Documentation | project-governance | Contributor Documentation |
 | seo-analytics-site-search | SEO, Analytics, and Site Search | seo-analytics-search | Website and Infrastructure |
