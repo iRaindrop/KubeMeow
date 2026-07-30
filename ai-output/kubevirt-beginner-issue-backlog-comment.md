@@ -1,0 +1,11 @@
+# Beginner Friendly Issue Backlog - Comment
+
+The KubeVirt user guide has the building blocks of a healthy beginner-friendly issue backlog, but the pieces are not consistently applied. A dedicated `good-first-issue` label exists and has been used on two dozen issues over time, and the contributing page clearly tells newcomers to look for it. Issues are generally well written: bug reports and feature requests follow templates with description, expectation, and URL fields, so most issues give a contributor enough context to start work rather than just a title. Staleness is handled automatically through the shared Prow lifecycle bot, which moves inactive issues through `lifecycle/stale` and `lifecycle/rotten` before closing them.
+
+The main gap is that the beginner backlog is effectively empty and the currently open issues are under-triaged. At the time of review there were no open `good-first-issue` items in either the user-guide or the core repository, so a new contributor who follows the documentation's advice finds nothing to pick up. Of the small number of open documentation issues, most carried no labels at all — no `kind/*`, no `sig/documentation`, and no `triage/accepted` — which means the backlog is not being actively categorized even though the label taxonomy is available.
+
+A specific, fixable inconsistency is the presence of two near-duplicate labels: the hyphenated `good-first-issue` that the team actually applies and the standard spaced `good first issue` that sits unused. GitHub's native "Contribute" experience and the good-first-issues discovery tooling key off the standard spaced label, so the project's real beginner issues are invisible to those channels. Consolidating on the standard label (or aliasing consistently) would immediately widen discovery.
+
+Finally, the aggressive auto-close behavior deserves attention. Because inactive issues — including valid enhancements — are closed as `lifecycle/rotten` rather than triaged or frozen, the backlog stays small in part by discarding work rather than curating it. A light triage pass that accepts, labels, and where appropriate freezes beginner-suitable issues would turn the existing automation and labels into a genuinely inviting on-ramp for new contributors.
+
+Rating: 3 - Meets standards
