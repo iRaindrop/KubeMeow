@@ -39,11 +39,13 @@ The analysis prompts live under `.github/prompts/` and are organized into three 
 
 There is also an optional composite engine, `full.prompt.md`, that runs the `answers`, `comment`, and `recommendations` engines for one area in that order (recommendations depends on the answers and comment files existing first). A per-area `full` wrapper (for example, `/information-architecture-full`) invokes it to produce all three output files in a single run.
 
+Above the per-area layer there is a **section-level** overall comment. The analysis groups areas into three sections (Project Documentation, Contributor Documentation, and Website and Infrastructure). The `section-comment.prompt.md` engine writes a two-to-five paragraph overall comment for one section by synthesizing that section's existing per-area comment files (it does not re-analyze the documentation), and it prepends a summary ratings table scraped from each area comment's `Rating:` line. Its data lives in `sections/<section>.md`, which lists the section's display name, slug, and member areas with the stem of each area's comment file. A per-section wrapper (for example, `/project-documentation-comment`) invokes it. Because the per-area comment files are a precondition, run the relevant `<area>-comment` prompts first. By default the output is written to `<project-slug>-<section-slug>-comment.md` (for example, `kubevirt-project-documentation-comment.md`), overridable with a `title` input.
+
 Each criteria area needs three wrapper files (`answers`, `comment`, `recommendations`), and the wrappers are mechanical: they reference the area name and embed the display name in the description. A `full` wrapper is optional per area.
 
-By default a prompt writes to `<project-slug>-<stem>-<type>.md` in the current directory (for example, `kubevirt-infoarch-answers.md`). Provide an optional `title` input to override the filename. To add or change questions for an area, edit only its `criteria/<area>.md` file.
+By default a prompt writes to `<project-slug>-<stem>-<type>.md` in the current directory (for example, `kubevirt-info-arch-answers.md`). Provide an optional `title` input to override the filename. To add or change questions for an area, edit only its `criteria/<area>.md` file.
 
-Output types: `answers`, `comment`, `recommendations` (plus the optional `full` composite).
+Output types: `answers`, `comment`, `recommendations` (plus the optional `full` composite). At the section level there is one additional output type, the section-level `comment` produced by the `section-comment` engine and its per-section wrappers.
 
 Areas:
 
@@ -56,13 +58,21 @@ Areas:
 | content-creation-process | Content Creation Process | content-creation-process | Project Documentation |
 | content-maintainability | Content Maintainability | content-maintainability | Project Documentation |
 | inclusive-language | Inclusive Language | inclusive-language | Project Documentation |
-| information-architecture | Information Architecture | infoarch | Project Documentation |
+| information-architecture | Information Architecture | info-arch | Project Documentation |
 | maintenance-planning | Maintenance Planning | maintenance-planning | Website and Infrastructure |
 | new-contributor-content | New Contributor Getting Started Content | new-contributor | Contributor Documentation |
 | new-user-content | New User Content | new-user | Project Documentation |
 | project-governance | Project Governance Documentation | project-governance | Contributor Documentation |
 | seo-analytics-site-search | SEO, Analytics, and Site Search | seo-analytics-search | Website and Infrastructure |
 | usability-accessibility-devices | Usability, Accessibility and Devices | usability-accessibility-devices | Website and Infrastructure |
+
+Sections (for the section-level overall comment):
+
+| Section | Section slug | Member areas (comment-file stems) |
+|---------|--------------|-----------------------------------|
+| Project Documentation | project-documentation | info-arch, new-user, content-maintainability, content-creation-process, inclusive-language |
+| Contributor Documentation | contributor-documentation | communication-methods-docd, beginner-issue-backlog, new-contributor, project-governance |
+| Website and Infrastructure | website-infrastructure | usability-accessibility-devices, branding-design, case-studies, seo-analytics-search, maintenance-planning |
 
 ### Example: invoking a pre-defined prompt
 
@@ -72,7 +82,7 @@ To have Copilot answer the information architecture questions, invoke the per-ar
 run /information-architecture-answers
 ```
 
-This runs the `information-architecture` questions through the shared `answers` engine and writes the result to the default file `kubevirt-infoarch-answers.md`.
+This runs the `information-architecture` questions through the shared `answers` engine and writes the result to the default file `kubevirt-info-arch-answers.md`.
 
 To override the output filename, pass a `title` input:
 
