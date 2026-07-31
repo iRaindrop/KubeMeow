@@ -1,0 +1,48 @@
+Section in analysis.md,Criteria file,Output file stem,Engine file,Wrapper prompt file
+Contributor Documentation,beginner-friendly-issue-backlog.md,beginner-issue-backlog,answers.prompt.md,beginner-issue-backlog-answers.prompt.md
+Contributor Documentation,beginner-friendly-issue-backlog.md,beginner-issue-backlog,comment.prompt.md,beginner-issue-backlog-comment.prompt.md
+Contributor Documentation,beginner-friendly-issue-backlog.md,beginner-issue-backlog,recommendations.prompt.md,beginner-issue-backlog-recommendations.prompt.md
+Contributor Documentation,beginner-friendly-issue-backlog.md,beginner-issue-backlog,full.prompt.md,beginner-issue-backlog-full.prompt.md
+Contributor Documentation,communication-methods-documented.md,communication-methods-docd,answers.prompt.md,communication-methods-docd-answers.prompt.md
+Contributor Documentation,communication-methods-documented.md,communication-methods-docd,comment.prompt.md,communication-methods-docd-comments.prompt.md
+Contributor Documentation,communication-methods-documented.md,communication-methods-docd,recommendations.prompt.md,communication-methods-docd-recommendations.prompt.md
+Contributor Documentation,communication-methods-documented.md,communication-methods-docd,full.prompt.md,communication-methods-docd-full.prompt.md
+Contributor Documentation,new-contributor-content.md,new-contributor,answers.prompt.md,new-contributor-answers.prompt.md
+Contributor Documentation,new-contributor-content.md,new-contributor,comment.prompt.md,new-contributor-comments.prompt.md
+Contributor Documentation,new-contributor-content.md,new-contributor,recommendations.prompt.md,new-contributor-recommendations.prompt.md
+Contributor Documentation,new-contributor-content.md,new-contributor,full.prompt.md,new-contributor-full.prompt.md
+Contributor Documentation,project-governance-documentation.md,project-governance,answers.prompt.md,project-governance-answers.prompt.md
+Contributor Documentation,project-governance-documentation.md,project-governance,comment.prompt.md,project-governance-comments.prompt.md
+Contributor Documentation,project-governance-documentation.md,project-governance,recommendations.prompt.md,project-governance-recommendations.prompt.md
+Contributor Documentation,project-governance-documentation.md,project-governance,full.prompt.md,project-governance-full.prompt.md
+Project Documentation,content-creation-process.md,content-creation-process,answers.prompt.md,content-creation-process-answers.prompt.md
+Project Documentation,content-creation-process.md,content-creation-process,comment.prompt.md,content-creation-process-comments.prompt.md
+Project Documentation,content-creation-process.md,content-creation-process,recommendations.prompt.md,content-creation-process-recommendations.prompt.md
+Project Documentation,content-creation-process.md,content-creation-process,full.prompt.md,content-creation-process-full.prompt.md
+Project Documentation,information-architecture.md,info-arch,answers.prompt.md,info-arch-answers.prompt.md
+Project Documentation,information-architecture.md,info-arch,comment.prompt.md,info-arch-comments.prompt.md
+Project Documentation,information-architecture.md,info-arch,recommendations.prompt.md,info-arch-recommendations.prompt.md
+Project Documentation,information-architecture.md,info-arch,full.prompt.md,info-arch-full.prompt.md
+Website and Infrastructure,case-studies.md,case-studies,answers.prompt.md,case-studies-answers.prompt.md
+Website and Infrastructure,case-studies.md,case-studies,comment.prompt.md,case-studies-comments.prompt.md
+Website and Infrastructure,case-studies.md,case-studies,recommendations.prompt.md,case-studies-recommendations.prompt.md
+Website and Infrastructure,case-studies.md,case-studies,full.prompt.md,case-studies-full.prompt.md
+Website and Infrastructure,usability-accessibility-devices.md,usability-accessibility-devices,answers.prompt.md,usability-accessibility-devices-answers.prompt.md
+Website and Infrastructure,usability-accessibility-devices.md,usability-accessibility-devices,comment.prompt.md,usability-accessibility-devices-comments.prompt.md
+Website and Infrastructure,usability-accessibility-devices.md,usability-accessibility-devices,recommendations.prompt.md,usability-accessibility-devices-recommendations.prompt.md
+Website and Infrastructure,usability-accessibility-devices.md,usability-accessibility-devices,full.prompt.md,usability-accessibility-devices-full.prompt.md
+Website and Infrastructure,branding-design.md,branding-design,answers.prompt.md,branding-design-answers.prompt.md
+Website and Infrastructure,branding-design.md,branding-design,comment.prompt.md,branding-design-comments.prompt.md
+Website and Infrastructure,branding-design.md,branding-design,recommendations.prompt.md,branding-design-recommendations.prompt.md
+Website and Infrastructure,branding-design.md,branding-design,full.prompt.md,branding-design-full.prompt.md
+Website and Infrastructure,seo-analytics-site-search.md,seo-analytics-search,answers.prompt.md,seo-analytics-search-answers.prompt.md
+Website and Infrastructure,seo-analytics-site-search.md,seo-analytics-search,comment.prompt.md,seo-analytics-search-comments.prompt.md
+Website and Infrastructure,seo-analytics-site-search.md,seo-analytics-search,recommendations.prompt.md,seo-analytics-search-recommendations.prompt.md
+Website and Infrastructure,seo-analytics-site-search.md,seo-analytics-search,full.prompt.md,seo-analytics-search-full.prompt.md
+Website and Infrastructure,maintenance-planning.md,maintenance-planning,answers.prompt.md,maintenance-planning-answers.prompt.md
+Website and Infrastructure,maintenance-planning.md,maintenance-planning,comment.prompt.md,maintenance-planning-comments.prompt.md
+Website and Infrastructure,maintenance-planning.md,maintenance-planning,recommendations.prompt.md,maintenance-planning-recommendations.prompt.md
+Website and Infrastructure,maintenance-planning.md,maintenance-planning,full.prompt.md,maintenance-planning-full.prompt.md
+Contributor Documentation,contributor-documentation.md,contributor-docmenation,section-comment.prompt.md,contributor-documentation-comment.prompt.md
+Project Documentation,project-documentation.md,project-documentation,section-comment.prompt.md,project-documentation-comment.prompt.md
+Website and Infrastructure,website-infrastructure.md,website-infrastructure,section-comment.prompt.md,website-infrastructure-comment.prompt.md
