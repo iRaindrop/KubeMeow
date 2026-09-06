@@ -1,0 +1,91 @@
+Section,Criteria,Analysis
+Information architecture,Is there high level conceptual content?,"Is there high level conceptual/""About"" content? Is the documentation feature complete? (i.e., each product feature is documented)"
+Information architecture,Is every product feature documented?,"Is the documentation feature complete? (i.e., each product feature is documented) — folded into the ""high level conceptual/About content"" question above."
+Information architecture,Does the documentation define all user roles (personas) for the product?,(no corresponding question in analysis.md)
+Information architecture,"Are there instructions (tasks, tutorials) documented for features?","Are there step-by-step instructions (tasks, tutorials) documented for features?"
+Information architecture,Are there instructions for all major use cases for each user role?,(no corresponding question in analysis.md)
+Information architecture,Are tasks organized by user role and use case?,(no corresponding question in analysis.md)
+Information architecture,Does instructional content demonstrate atomicity — are individual tasks clearly named according to their goals?,Does task and tutorial content demonstrate atomicity and isolation of concerns? (Are tasks clearly named according to user goals?)
+Information architecture,Are tasks written as numbered step-by-step instructions?,"(no corresponding question in analysis.md; ""step-by-step"" appears only within the ""Are there step-by-step instructions (tasks, tutorials)..."" question)"
+Information architecture,Do task descriptions in headings and the TOC describe the task with a verb phrase?,(no corresponding question in analysis.md)
+Information architecture,Is the documentation free of any key features which are documented but missing task documentation?,Are there any key features which are documented but missing task documentation?
+Information architecture,"Is the ""happy path"" — the most common use case — documented?","Is the ""happy path""/most common use case documented? Does task and tutorial content demonstrate atomicity and isolation of concerns? (Are tasks clearly named according to user goals?)"
+Information architecture,"If the documentation does not suffice, is there a clear escalation path for users needing more help?","If the documentation does not suffice, is there a clear escalation path for users needing more help? (FAQ, Troubleshooting)"
+Information architecture,"If the product exposes an API, is there a complete reference?","If the product exposes an API, is there a complete reference?"
+Information architecture,"If the product has CLIs, are there complete references?",(no corresponding question in analysis.md)
+Information architecture,Is content up to date and accurate?,Is content up to date and accurate?
+Information architecture,"Does the documentation separate conceptual, instructional, and reference information?",(no corresponding question in analysis.md)
+New user content,"Is ""getting started"" clearly labeled? (""Getting started"", ""Installation"", ""First steps"", or the equivalent.)","Is ""getting started"" clearly labeled? (""Getting started"", ""Installation"", ""First steps"", etc.)"
+New user content,"Is there a ""getting started"" path for all user roles?",(no corresponding question in analysis.md)
+New user content,Is installation documented step-by-step?,Is installation documented step-by-step?
+New user content,"Are different types of installation documented (development, test, production) if necessary?",(no corresponding question in analysis.md)
+New user content,"If needed, are multiple OSes documented?","If needed, are multiple OSes documented?"
+New user content,Do users know where to go after reading the getting started guide?,Do users know where to go after reading the getting started guide?
+New user content,Is your new user content clearly signposted on your site's homepage or at the top of your information architecture?,Is your new user content clearly signposted on your site's homepage or at the top of your information architecture?
+New user content,Is there easily copy-pastable sample code or other example content?,Is there sample code or other example content that can easily be copy-pasted?
+Content maintainability & site mechanics,Is your documentation searchable?,Is your documentation searchable?
+Content maintainability & site mechanics,Are you planning for localization/internationalization as regards site directory structure?,Are you planning for localization/internationalization with regards to site directory structure? Is a localization framework present?
+Content maintainability & site mechanics,Is a localization framework present?,"Is a localization framework present? — folded into the ""planning for localization/internationalization"" question above."
+Content maintainability & site mechanics,Do you have a clearly documented method for versioning your content?,Do you have a clearly documented method for versioning your content?
+Content maintainability & site mechanics,Is release-specific information documented in release notes?,(no corresponding question in analysis.md)
+Content maintainability & site mechanics,Is the documentation free of duplicate or nearly duplicated sections of information?,(no corresponding question in analysis.md)
+Content maintainability & site mechanics,Do informational graphics add value by providing information in a way that would be difficult in text?,(no corresponding question in analysis.md)
+Content maintainability & site mechanics,"Will graphics require frequent modifications due to software changes, GUI updates, or translation?",(no corresponding question in analysis.md)
+Content creation processes,Is there a clearly documented (ongoing) contribution process for documentation?,Is there a clearly documented (ongoing) contribution process for documentation?
+Content creation processes,Does your code release process account for documentation creation & updates?,Does your code release process account for documentation creation & updates?
+Content creation processes,Who reviews and approves documentation pull requests?,Who reviews and approves documentation pull requests?
+Content creation processes,Does the website have a clear owner/maintainer?,Does the website have a clear owner/maintainer?
+Inclusive language,"Are there any customer-facing utilities, endpoints, class names, or feature names that use non-recommended words as documented by the Inclusive Naming Initiative website?","Are there any customer-facing utilities, endpoints, class names, or feature names that use non-recommended words as documented by the Inclusive Naming Initiative website?"
+Inclusive language,"Does the project use language like ""simple"", ""easy"", etc.?","Does the project use language like ""simple"", ""easy"", etc.?"
+Communication methods documented,Is there a Slack/Discord/Discourse or equivalent community prominently linked from your website?,Is there a Slack/Discord/Discourse/etc. community and is it prominently linked from your website?
+Communication methods documented,Is there a direct link to your GitHub project or repository?,Is there a direct link to your GitHub organization/repository?
+Communication methods documented,"Can users find and join periodic (weekly or monthly) project meetings, if applicable?",Are weekly/monthly project meetings documented? Is it clear how someone can join those meetings?
+Communication methods documented,Are mailing lists documented?,Are mailing lists documented?
+Beginner friendly issue backlog,Are docs issues well-triaged?,Are docs issues well-triaged?
+Beginner friendly issue backlog,"Is there a clearly marked way for new contributors to make code or documentation contributions (i.e. a ""good first issue"" label)?","Is there a clearly marked way for new contributors to make code or documentation contributions (i.e. a ""good first issue"" label)?"
+Beginner friendly issue backlog,"Are issues well-documented (i.e., more than just a title)?","Are issues well-documented (i.e., more than just a title)?"
+Beginner friendly issue backlog,Are issues maintained for staleness?,Are issues maintained for staleness?
+New contributor getting started content,Do you have a community repository or section on your website?,Do you have a community repository or section on your website?
+New contributor getting started content,Is there a document specifically welcoming new contributors and documenting a first contribution process?,Is there a document specifically for new contributors/your first contribution?
+New contributor getting started content,Can new users find where to get help?,Do new users know where to get help?
+Project governance documentation,Is project governance clearly documented?,Is project governance clearly documented?
+Single-source requirement,"Does the project have a single source for documentation? If not, is there a reason?",(no corresponding question in analysis.md; the Single-source requirement section retains the explanatory description but lists no evaluation question)
+Minimal website requirements,Are a majority of the Website guidelines satisfied? (Sandbox),(no corresponding question in analysis.md; minimal website requirements are presented as a maturity-level table rather than questions)
+Minimal website requirements,"Is there rudimentary project documentation, or a placeholder or substitute? (Sandbox)",(no corresponding question in analysis.md)
+Minimal website requirements,Are all Website guidelines satisfied? (Incubating),(no corresponding question in analysis.md)
+Minimal website requirements,Has a Docs assessment or reassessment been requested through the CNCF service desk? (Incubating),(no corresponding question in analysis.md)
+Minimal website requirements,"Does project documentation meet these standards: stakeholders/personas identified and needs documented, hosted directly on the website, single-source requirement met, comprehensive? (Incubating)",(no corresponding question in analysis.md)
+Minimal website requirements,Are follow-through actions from the Docs assessment complete? (Graduated),(no corresponding question in analysis.md)
+Minimal website requirements,Does project documentation fully address the needs of key stakeholders? (Graduated),(no corresponding question in analysis.md)
+Minimal website requirements,Is the website repo in an archived state? (Archived),(no corresponding question in analysis.md; the analysis template covers only incubating and graduated levels)
+Minimal website requirements,"Is the archived status of the project obvious to those visiting the website, such as through the use of a prominent banner? (Archived)",(no corresponding question in analysis.md)
+Minimal website requirements,"If a successor project exists, are there links to its website and/or migration documentation? (Archived)",(no corresponding question in analysis.md)
+"Usability, accessibility and devices",Is the website usable from mobile?,Is the website usable from mobile?
+"Usability, accessibility and devices",Are doc pages readable?,Are doc pages readable?
+"Usability, accessibility and devices","Are all or most website features accessible from mobile -- such as the top-nav, site search, and in-page table of contents?","Are all / most website features accessible from mobile -- such as the top-nav, site search and in-page table of contents?"
+"Usability, accessibility and devices",Might a mobile-first design make sense for your project?,Might a mobile-first design make sense for your project?
+"Usability, accessibility and devices",Are color contrasts significant enough for color-impaired readers?,Are color contrasts significant enough for color-impaired readers?
+"Usability, accessibility and devices",Are most website features usable using a keyboard only?,Are most website features usable using a keyboard only?
+"Usability, accessibility and devices",Does text-to-speech offer listeners a good experience?,Does text-to-speech offer listeners a good experience?
+Branding,"Is there an easily recognizable brand for the project (logo, font, and color scheme) clearly identifiable?",Is there an easily recognizable brand for the project (logo + color scheme) clearly identifiable?
+Branding,Is the brand used across the website consistently?,Is the brand used across the website consistently?
+Branding,Is the website's typography clean and legible?,Is the website's typography clean and well-suited for reading?
+Case studies/social proof,Are there case studies available for the project and are they documented on the website?,Are there case studies available for the project and are they documented on the website?
+Case studies/social proof,Are there user testimonials available?,Are there user testimonials available?
+Case studies/social proof,Is there an active project blog?,Is there an active project blog?
+Case studies/social proof,Are there community talks for the project and are they present on the website?,Are there community talks for the project and are they present on the website?
+Case studies/social proof,Is there a logo wall of users/participating organizations?,Is there a logo wall of users/participating organizations?
+"SEO, Analytics and site-local search",Is analytics enabled for the production server?,Is analytics enabled for the production server?
+"SEO, Analytics and site-local search",Is analytics disabled for all other deploys?,Is analytics disabled for all other deploys?
+"SEO, Analytics and site-local search","If your project used Google Analytics, have you migrated to GA4?","If your project used Google Analytics, have you migrated to GA4?"
+"SEO, Analytics and site-local search",Can Page-not-found (404) reports easily be generated from you site analytics? Provide a sample of the site's current top-10 404s.,Can Page-not-found (404) reports easily be generated from you site analytics? Provide a sample of the site's current top-10 404s.
+"SEO, Analytics and site-local search","Is site indexing supported for the production server, while disabled for website previews and builds for non-default branches?","Is site indexing supported for the production server, while disabled for website previews and builds for non-default branches?"
+"SEO, Analytics and site-local search",Is local intra-site search available from the website?,Is local intra-site search available from the website?
+"SEO, Analytics and site-local search","Are the current custodian(s) of the following accounts clearly documented: analytics, Google Search Console, site-search (such as Google CSE or Algolia)?","Are the current custodian(s) of the following accounts clearly documented: analytics, Google Search Console, site-search (such as Google CSE or Algolia)?"
+Maintenance planning,"Is your website tooling well supported by the community (i.e., Hugo with the Docsy theme) or commonly used by CNCF projects (our recommended tech stack)?","Is your website tooling well supported by the community (i.e., Hugo with the Docsy theme) or commonly used by CNCF projects (our recommended tech stack)?"
+Maintenance planning,Are you actively cultivating website maintainers from within the community?,Are you actively cultivating website maintainers from within the community?
+Maintenance planning,Are site build times reasonable?,Are site build times reasonable?
+Maintenance planning,Do site maintainers have adequate permissions?,Do site maintainers have adequate permissions?
+Other,Is your website accessible via HTTPS?,Is your website accessible via HTTPS?
+Other,"Does HTTP access, if any, redirect to HTTPS?","Does HTTP access, if any, redirect to HTTPS?"
+Other,"Are links working and current? (Internal documentation, External documentation, External websites, Web applications)",(no corresponding question in analysis.md)
