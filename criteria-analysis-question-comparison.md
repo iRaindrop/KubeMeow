@@ -11,6 +11,9 @@ with its corresponding question in the
 template. Where the analysis template has no corresponding question, this is
 noted as `(no corresponding question in analysis.md)`.
 
+A spreadsheet of this data is the CSV file by the same name, and a Google sheet of it here:
+https://docs.google.com/spreadsheets/d/10Gtt-BYs7DQXo1BKqIxEDZGJKDtEeLB_KgSxdHikhV4/edit?usp=sharing
+
 ## Project documentation
 
 ### Information architecture
